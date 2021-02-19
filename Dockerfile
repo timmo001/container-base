@@ -74,14 +74,6 @@ ARG BUILD_REPOSITORY
 
 # Labels
 LABEL \
-    io.hass.name="Container base for ${BUILD_ARCH}" \
-    io.hass.description="${BUILD_ARCH} base image" \
-    io.hass.arch="${BUILD_ARCH}" \
-    io.hass.type="base" \
-    io.hass.version=${BUILD_VERSION} \
-    io.hass.base.version=${BUILD_VERSION} \
-    io.hass.base.name="alpine" \
-    io.hass.base.image="timmo001/container-base" \
     maintainer="Aidan Timson <contact@timmo.xyz>" \
     org.opencontainers.image.title="Container base for ${BUILD_ARCH}" \
     org.opencontainers.image.description="${BUILD_ARCH} Base image" \
