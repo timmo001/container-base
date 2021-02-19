@@ -17,7 +17,7 @@ if bashio::supervisor.ping; then
     bashio::log.blue \
         '-----------------------------------------------------------'
     bashio::log.blue \
-        ' Please, share the above information when looking for help'
+        ' Please share the above information when looking for help'
     bashio::log.blue \
         ' or support.'
     bashio::log.blue \

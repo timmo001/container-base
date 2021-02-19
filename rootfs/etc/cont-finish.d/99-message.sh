@@ -6,7 +6,7 @@
 if [[ "${S6_STAGE2_EXITED}" -ne 0 ]]; then
     bashio::log.red \
         '-----------------------------------------------------------'
-    bashio::log.red '                Oops! Something went wrong.'
+    bashio::log.red '                Something went wrong!'
     bashio::log.red
     bashio::log.red ' Sorry, but something went wrong when'
     bashio::log.red ' starting or running this container.'
