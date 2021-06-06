@@ -23,20 +23,19 @@ RUN \
     set -o pipefail \
     \
     && apk add --no-cache --virtual .build-dependencies \
-        curl=7.74.0-r0 \
-        tar=1.33-r1 \
+        tar=1.34-r0 \
     \
     && apk add --no-cache \
-        libcrypto1.1=1.1.1j-r0 \
-        libssl1.1=1.1.1j-r0 \
+        libcrypto1.1=1.1.1k-r0 \
+        libssl1.1=1.1.1k-r0 \
         musl-utils=1.2.2-r0 \
         musl=1.2.2-r0 \
     \
     && apk add --no-cache \
         bash=5.1.0-r0 \
-        curl=7.74.0-r0 \
+        curl=7.77.0-r0 \
         jq=1.6-r1 \
-        openssl=1.1.1j-r0 \
+        openssl=1.1.1k-r0 \
         tzdata=2021a-r0 \
     \
     && S6_ARCH="${BUILD_ARCH}" \
@@ -50,7 +49,7 @@ RUN \
     && mkdir -p /etc/services.d \
     \
     && curl -J -L -o /tmp/bashio.tar.gz \
-        "https://github.com/hassio-addons/bashio/archive/v0.13.0.tar.gz" \
+        "https://github.com/hassio-addons/bashio/archive/v0.13.1.tar.gz" \
     && mkdir /tmp/bashio \
     && tar zxvf \
         /tmp/bashio.tar.gz \
