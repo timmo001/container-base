@@ -28,12 +28,12 @@ RUN \
     && apk add --no-cache \
         libcrypto1.1=1.1.1k-r0 \
         libssl1.1=1.1.1k-r0 \
-        musl-utils=1.2.2-r0 \
-        musl=1.2.2-r0 \
+        musl-utils=1.2.2-r3 \
+        musl=1.2.2-r3 \
     \
     && apk add --no-cache \
-        bash=5.1.0-r0 \
-        curl=7.77.0-r0 \
+        bash=5.1.4-r0 \
+        curl=7.78.0-r0 \
         jq=1.6-r1 \
         openssl=1.1.1k-r0 \
         tzdata=2021a-r0 \
