@@ -7,10 +7,13 @@ on:
     types:
       - published
   workflow_run:
-    workflows: ["CI"]
-    branches: [master]
+    workflows:
+      - "CI"
+    branches:
+      - master
     types:
       - completed
+  workflow_dispatch:
 
 jobs:
   information:
@@ -43,7 +46,6 @@ jobs:
               environment="beta"
             fi
           fi
-
           echo "::set-output name=environment::${environment}"
           echo "::set-output name=version::${version}"
   deploy:
@@ -106,12 +108,12 @@ jobs:
             echo "::error ::Could not determine platform for architecture ${{ matrix.architecture }}"
             exit 1
           fi
-      - name: 🏗  Login to GitHub Container Registry
+      - name: 🏗 Login to GitHub Container Registry
         uses: docker/login-action@v1.10.0
         with:
           registry: ghcr.io
-          username: ${{ secrets.GHCR_USERNAME }}
-          password: ${{ secrets.GHCR_PASSWORD }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: 🚀 Build and push
         uses: docker/build-push-action@v2.7.0
         with:
