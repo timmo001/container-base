@@ -35,7 +35,7 @@ RUN \
         bash=5.1.4-r0 \
         curl=7.78.0-r0 \
         jq=1.6-r1 \
-        openssl=1.1.1k-r0 \
+        openssl=1.1.1l-r0 \
         tzdata=2021a-r0 \
     \
     && S6_ARCH="${BUILD_ARCH}" \
