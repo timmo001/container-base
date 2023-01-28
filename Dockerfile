@@ -26,17 +26,17 @@ RUN \
         tar=1.34-r0 \
     \
     && apk add --no-cache \
-        libcrypto1.1=1.1.1l-r0 \
-        libssl1.1=1.1.1l-r0 \
-        musl-utils=1.2.2-r3 \
-        musl=1.2.2-r3 \
+        libcrypto1.1 \
+        libssl1.1 \
+        musl-utils \
+        musl \
     \
     && apk add --no-cache \
-        bash=5.1.4-r0 \
-        curl=7.78.0-r0 \
-        jq=1.6-r1 \
-        openssl=1.1.1l-r0 \
-        tzdata=2021a-r0 \
+        bash \
+        curl \
+        jq \
+        openssl \
+        tzdata \
     \
     && S6_ARCH="${BUILD_ARCH}" \
     && if [ "${BUILD_ARCH}" = "i386" ]; then S6_ARCH="x86"; fi \
