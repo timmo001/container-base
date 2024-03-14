@@ -115,7 +115,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: 🚀 Build and push
-        uses: docker/build-push-action@v3.3.0
+        uses: docker/build-push-action@v5.3.0
         with:
           push: true
           # yamllint disable rule:line-length
